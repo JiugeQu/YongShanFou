@@ -6,7 +6,7 @@ import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 import java.io.IOException;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-
+// 不用了
 public class SseSession {
 
     private static Map<Integer, SseEmitter> sseEmitterMap = new ConcurrentHashMap<>();
