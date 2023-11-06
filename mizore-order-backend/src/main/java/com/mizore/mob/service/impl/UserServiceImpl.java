@@ -49,7 +49,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
 
     @Override
     public Result sign(SignFromDTO signFromDTO) {
-        // 检查手机号和验证码正确性
+        // 检查手机号和验证码一致性
         String phone = signFromDTO.getPhone();
         if (checkPhoneAndCode(phone, signFromDTO.getCode())) {
             return Result.error("手机或验证码有误，或验证码已失效");
@@ -67,7 +67,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
 
     @Override
     public Result login(LoginFromDTO loginFromDTO) {
-        // 检查手机号和验证码正确性
+        // 检查手机号和验证码一致性
         String phone = loginFromDTO.getPhone();
         if (!checkPhoneAndCode(phone, loginFromDTO.getCode())) {
             return Result.error("手机或验证码有误，或验证码已失效");
@@ -86,6 +86,10 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         claims.put("name", resUser.getName());
         claims.put("role", resUser.getRole());
         String jwt = JWT.generateJWT(claims);
+        // jwt - secretKey 存redis一份，并设置双倍过期时间。
+        // 双倍过期时间是实现jwt自动刷新的。
+        // secretKey存redis是为了实现分布式的token.保证JVM2能解析JVM1颁发的token
+        stringRedisTemplate.opsForValue().set(LOGIN_TOKEN_PREFIX + jwt, JWT.getSecretKeyStr(), JWT.TTL * 2, TimeUnit.MILLISECONDS);
         return Result.ok(jwt);
     }
 

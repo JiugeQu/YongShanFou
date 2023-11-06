@@ -3,6 +3,7 @@ package com.mizore.mob.config;
 import com.mizore.mob.dto.Result;
 import static com.mizore.mob.util.Constant.*;
 
+import com.mizore.mob.exception.IdemPotentException;
 import com.mizore.mob.exception.OrderException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.dao.DuplicateKeyException;
@@ -46,5 +47,11 @@ public class WebExceptionHandler {
     public Result handleOrderException(OrderException e) {
         log.error(e.toString());
         return Result.error("下单异常！！");
+    }
+
+    @ExceptionHandler(IdemPotentException.class)
+    public Result handleExceptionHandler(IdemPotentException e) {
+        log.error(e.toString());
+        return Result.error("发生疑似误操作的重复请求！！");
     }
 }

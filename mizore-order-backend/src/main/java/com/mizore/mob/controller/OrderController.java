@@ -1,5 +1,6 @@
 package com.mizore.mob.controller;
 
+import com.mizore.mob.annotation.Idempotent;
 import com.mizore.mob.dto.Result;
 import com.mizore.mob.entity.Order;
 import com.mizore.mob.entity.OrderDish;
@@ -39,6 +40,7 @@ public class OrderController {
      * @throws OrderException
      */
     @PostMapping
+    @Idempotent(expireTime = 10)
     public Result createOrder(
             @RequestBody List<OrderDish> orderDishes,
             @RequestParam(value = "address") String address,

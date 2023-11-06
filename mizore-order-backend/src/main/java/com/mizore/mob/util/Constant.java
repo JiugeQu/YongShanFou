@@ -46,5 +46,11 @@ public class Constant {
     public static final String SSE_COMPLETED_MESSAGE = "preparation completed";
     public static final String SSE_DELIVERING_MESSAGE = "delivering";
 
+    // 幂等性redis setnx 的键前缀
+    public static final String IDEMPOTENT_KEY_PREFIX = "idempotent:";
+    public static final String IDEMPOTENT_VALUE = "1";
+
+    public static final String LOGIN_TOKEN_PREFIX = "login:token:";
+
 
 }

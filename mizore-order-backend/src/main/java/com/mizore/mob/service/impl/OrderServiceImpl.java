@@ -57,7 +57,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order> implements
 
 
     // 事务方法中抛出RuntimeException和Error时才会生效
-    @Transactional(rollbackFor = OrderException.class)
+    @Transactional
     public boolean doCreateOrder(List<OrderDish> orderDishes,
                                 String address,
                                 String note,
