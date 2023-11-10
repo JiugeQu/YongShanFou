@@ -1,8 +1,8 @@
 ## JWT + Redis 实现分布式toke与自动续期
 
-在服务启动时生成随机密钥，用于 `JWT`（Json Web `token`s）的颁发与解析。
+在服务启动时生成随机密钥，用于 `JWT`（Json Web tokens）的颁发与解析。
 
-为应对分布式场景下 `JWT` 的可用性（要求jvm2号能解析jvm1号颁发的`token`）， 在每次颁发 `token` 时，将 `token` - secretKey，作为键值存入 Redis，并设置相比 `JWT` 二倍过期时间。
+为应对分布式场景下 `JWT` 的可用性（要求jvm2号能解析jvm1号颁发的`token`）， 在每次颁发 `token` 时，将 `token - secretKey` ，作为键值存入 Redis，并设置相比 `JWT` 二倍过期时间。
 
 每次解析指定 `token` 时，先去 Redis 根据传来的 `token` 判断其合法性以及拿到解析它所需要的密钥，以及它的剩余有效时间。
 
