@@ -3,6 +3,7 @@ package com.mizore.mob.interceptor;
 import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.lang.Assert;
 import cn.hutool.core.util.StrUtil;
+import cn.hutool.json.JSONUtil;
 import com.mizore.mob.dto.Result;
 import com.mizore.mob.entity.User;
 import com.mizore.mob.util.Constant;
@@ -43,7 +44,7 @@ public class RefreshTokenInterceptor implements HandlerInterceptor {
         String keyStr = stringRedisTemplate.opsForValue().get(tokenKey);
         if (StrUtil.isEmpty(keyStr)) {
             // token有误或彻底过期（超过ttl*2）
-            response.getOutputStream().write(Result.error("NOT_LOGIN").toString().getBytes());
+//            response.getOutputStream().write(Result.error("NOT_LOGIN").toString().getBytes());
             return true;
         }
 
@@ -54,11 +55,11 @@ public class RefreshTokenInterceptor implements HandlerInterceptor {
             claims = JWT.parseJWT(token, JWT.getSecretKey(keyStr));
         } catch (JwtException e) {
             // JWT鉴权失败 token错误或者过期
-            response.getOutputStream().write(Result.error("NOT_LOGIN").toString().getBytes());
+//            response.getOutputStream().write(JSONUtil.toJsonStr(Result.error("NOT_LOGIN")).getBytes());
             return true;
         }
         if (claims == null) {
-            response.getOutputStream().write(Result.error("INVALID_TOKEN").toString().getBytes());
+//            response.getOutputStream().write(JSONUtil.toJsonStr(Result.error("INVALID_TOKEN")).getBytes());
             return true;
         }
         // 认证通过
@@ -71,7 +72,7 @@ public class RefreshTokenInterceptor implements HandlerInterceptor {
         Long expire = stringRedisTemplate.getExpire(tokenKey);      // 得到剩余时间
         // token的redis缓存保质期是两天，在保质期还剩小于一天时重新颁发token。
         // expire会在键是过期键时得到null,但经过上面对keyStr的判断，可以断言这里的expire不会为hull
-        if (expire <= JWT.TTL) {
+        if (expire * 1000 <= JWT.TTL) { //统一单位为毫秒
             // 剩余时间不足一天，需要自动续期，实际上是重新颁发新jwt
             String jwt = JWT.generateJWT(map);
             // 把新jwt放入

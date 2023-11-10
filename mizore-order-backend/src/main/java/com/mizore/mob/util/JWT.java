@@ -13,7 +13,7 @@ public class JWT {
 
     private static final SecretKey SECRET_KEY = Jwts.SIG.HS256.key().build();
 
-    public static final long TTL = 24 * 3600 * 1000;    // 1day  单位ms
+    public static final long TTL = 24 * 3600 * 1000 * 3;    // 3 days  单位ms
     public static String generateJWT(Map<String, Object> claims) {
         return  Jwts.builder()
                 .claims(claims)

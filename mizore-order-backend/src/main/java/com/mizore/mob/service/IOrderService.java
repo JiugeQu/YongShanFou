@@ -19,11 +19,21 @@ import java.util.List;
  */
 public interface IOrderService extends IService<Order> {
 
-    Result createOrder(List<OrderDish> orderDishes, String address, String note, LocalDateTime expectArriveTime) throws OrderException;
+    Result createOrder(List<OrderDish> orderDishes, String address, String note, LocalDateTime expectArriveTime) ;
 
     Result confirm(Long orderCode);
 
     Result finish(Long orderCode);
 
     Result deliver(Long orderCode);
+
+    Result getOrdersByStates(Byte[] state);
+
+    Result getOrdersByState(Byte state);
+
+    Result getOrderByCode(Long orderCode);
+
+    Result getHistoryOrdersOfDeliver();
+
+    Result arrived(Long orderCode);
 }

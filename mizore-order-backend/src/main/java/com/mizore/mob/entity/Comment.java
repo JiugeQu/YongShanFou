@@ -3,6 +3,7 @@ package com.mizore.mob.entity;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import java.io.Serializable;
+import java.time.LocalDateTime;
 
 /**
  * <p>
@@ -21,9 +22,38 @@ public class Comment implements Serializable {
 
     private Integer userId;
 
-    private Integer dishId;
+    private Long orderCode;
 
     private String content;
+
+    private LocalDateTime createTime;
+
+    @Override
+    public String toString() {
+        return "Comment{" +
+                "id=" + id +
+                ", userId=" + userId +
+                ", orderCode=" + orderCode +
+                ", content='" + content + '\'' +
+                ", createTime=" + createTime +
+                '}';
+    }
+
+    public LocalDateTime getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(LocalDateTime createTime) {
+        this.createTime = createTime;
+    }
+
+    public Long getOrderCode() {
+        return orderCode;
+    }
+
+    public void setOrderCode(Long orderCode) {
+        this.orderCode = orderCode;
+    }
 
     public Integer getId() {
         return id;
@@ -41,13 +71,7 @@ public class Comment implements Serializable {
         this.userId = userId;
     }
 
-    public Integer getDishId() {
-        return dishId;
-    }
 
-    public void setDishId(Integer dishId) {
-        this.dishId = dishId;
-    }
 
     public String getContent() {
         return content;
@@ -57,13 +81,5 @@ public class Comment implements Serializable {
         this.content = content;
     }
 
-    @Override
-    public String toString() {
-        return "Comment{" +
-            "id = " + id +
-            ", userId = " + userId +
-            ", dishId = " + dishId +
-            ", content = " + content +
-        "}";
-    }
+
 }

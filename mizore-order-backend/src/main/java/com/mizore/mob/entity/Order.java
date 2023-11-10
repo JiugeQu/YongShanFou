@@ -36,9 +36,10 @@ public class Order implements Serializable {
      * 2：备餐中-商家确认后处于备餐中，
      * 3：待配送-备餐完毕等待骑手配送，
      * 4：配送中-骑手抢单后到送达前，
-     * 5：已送达-骑手送达
+     * 5：已送达并未评价-骑手送达
+     * 6：已评价
      */
-    private Byte state = ORDER_WAIT_CONFIRM;
+    private Byte state;
 
     private Integer deliverId;
 

@@ -6,6 +6,7 @@ import static com.mizore.mob.util.Constant.*;
 import com.mizore.mob.exception.IdemPotentException;
 import com.mizore.mob.exception.OrderException;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.core.annotation.Order;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
@@ -19,11 +20,6 @@ import java.util.stream.Collectors;
 @RestControllerAdvice
 public class WebExceptionHandler {
 
-    @ExceptionHandler(RuntimeException.class)
-    public Result handleRuntimeException(RuntimeException e) {
-        log.error(e.toString());
-        return Result.error(RUNTIME_EXCEPTION_MSG);
-    }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public Result handleMethodArgumentNotValidException(MethodArgumentNotValidException e) {
@@ -43,15 +39,23 @@ public class WebExceptionHandler {
         return Result.error("数据重复！！");
     }
 
-    @ExceptionHandler(OrderException.class)
+    @ExceptionHandler({OrderException.class})
+    @Order(value = 1)
     public Result handleOrderException(OrderException e) {
         log.error(e.toString());
-        return Result.error("下单异常！！");
+        return Result.error(e.getMessage());
     }
 
     @ExceptionHandler(IdemPotentException.class)
     public Result handleExceptionHandler(IdemPotentException e) {
         log.error(e.toString());
-        return Result.error("发生疑似误操作的重复请求！！");
+        return Result.error(e.getMessage());
+    }
+
+    @ExceptionHandler(RuntimeException.class)
+    @Order
+    public Result handleRuntimeException(RuntimeException e) {
+        log.error(e.toString());
+        return Result.error(RUNTIME_EXCEPTION_MSG);
     }
 }

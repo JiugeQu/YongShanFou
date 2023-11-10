@@ -63,7 +63,13 @@ public class IdempotentAspect {
         long expireTime = annotation.expireTime();
         Boolean res = stringRedisTemplate.opsForValue().setIfAbsent(key, Constant.IDEMPOTENT_VALUE, Duration.ofSeconds(expireTime));
         if (Boolean.FALSE.equals(res)) {
-            throw new IdemPotentException("发生误重复请求！！");
+            // 判断是否是哈希冲突导致
+            String existingUserId = stringRedisTemplate.opsForValue().get(key);
+            if (userId.toString().equals(existingUserId)) {
+                // 重复请求，无效化该请求
+                throw new IdemPotentException("发生误重复请求！！");
+            }
+            // 能执行到这里表面发生了哈希冲突，该请求实际是有效请求，正常处理它
         }
         // 通过幂等性检验 执行控制器方法
         try {

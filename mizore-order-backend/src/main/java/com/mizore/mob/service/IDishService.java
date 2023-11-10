@@ -16,7 +16,7 @@ public interface IDishService extends IService<Dish> {
 
     Result addDish(Dish dish);
 
-    Result changeState(Integer id);
+    Result changeState(Integer id, Byte state);
 
     Result searchDishesByName(String keyword);
 
