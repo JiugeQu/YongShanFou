@@ -51,7 +51,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
     public Result sign(SignFromDTO signFromDTO) {
         // 检查手机号和验证码一致性
         String phone = signFromDTO.getPhone();
-        if (checkPhoneAndCode(phone, signFromDTO.getCode())) {
+        if (!checkPhoneAndCode(phone, signFromDTO.getCode())) {
             return Result.error("手机或验证码有误，或验证码已失效");
         }
 

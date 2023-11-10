@@ -31,10 +31,11 @@ public class Dish implements Serializable {
     private String name;
 
     /**
-     * 1：上架  2：下架   默认未上架状态
+     * 1：上架  2：下架   3: 售罄
+     * 默认上架状态
      */
 
-    private Byte state = 2;
+    private Byte state = 1;
 
     /**
      * 菜品首次推出时间
@@ -50,6 +51,33 @@ public class Dish implements Serializable {
     private BigDecimal price;
 
     private String type;
+
+    // 优先级 排序中越小越靠上，新菜默认为当前max(priority) + 1
+    private int priority;
+
+    @Override
+    public String toString() {
+        return "Dish{" +
+                "id=" + id +
+                ", image='" + image + '\'' +
+                ", description='" + description + '\'' +
+                ", name='" + name + '\'' +
+                ", state=" + state +
+                ", createTime=" + createTime +
+                ", sale=" + sale +
+                ", price=" + price +
+                ", type='" + type + '\'' +
+                ", priority=" + priority +
+                '}';
+    }
+
+    public int getPriority() {
+        return priority;
+    }
+
+    public void setPriority(int priority) {
+        this.priority = priority;
+    }
 
     public Integer getId() {
         return id;
@@ -123,18 +151,4 @@ public class Dish implements Serializable {
         this.type = type;
     }
 
-    @Override
-    public String toString() {
-        return "Dish{" +
-            "id = " + id +
-            ", image = " + image +
-            ", description = " + description +
-            ", name = " + name +
-            ", state = " + state +
-            ", createTime = " + createTime +
-            ", sale = " + sale +
-            ", price = " + price +
-            ", type = " + type +
-        "}";
-    }
 }

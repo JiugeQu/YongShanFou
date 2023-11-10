@@ -6,6 +6,10 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
+import java.math.BigDecimal;
+import java.util.List;
+import java.util.Map;
+
 /**
  * <p>
  *  Mapper 接口
@@ -20,4 +24,9 @@ public interface OrderMapper extends BaseMapper<Order> {
 
     @Select("SELECT user_id FROM `order` WHERE code = #{code}")
     Integer selectUserIdByCode(@Param("code") Long code);
+
+    List<Map<Long, Object>> testIn(List<Byte> states);
+
+    @Select("SELECT total_price FROM `order` WHERE code = #{code}")
+    BigDecimal selectTotalPriceByCode(@Param("code") Long code);
 }
