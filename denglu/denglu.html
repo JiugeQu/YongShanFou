@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>登录</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="../../index.css" />
+    <link rel="stylesheet" href="./denglu.css" />
+    <script type="text/javascript" src="./denglu.js"></script>
+  </head>
+  <body>
+    <div class="flex-col page">
+      <div class="flex-row justify-center items-center relative section">
+        <a href="../zhuce/zhuce.html"><img
+          class="image pos"
+          src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/6545aac55a7e3f0310c044cf/6545aaf3f9a7df001221795e/16990646898264425455.png"
+          /></a>
+        <span class="text">登录</span>
+      </div>
+      <div class="section_2"></div>
+      <div class="flex-col">
+        <div class="flex-col section_3">
+          <div class="flex-row justify-evenly group">
+            <span class="font_1 text_2">欢迎登录</span>
+            <span class="font_1">用膳否</span>
+          </div>
+          <span class="self-center text_3">WELCOME!</span>
+          <div class="flex-col group_2 space-y-32">
+            <div class="flex-row items-center section_6 space-x-16">
+              <img
+                class="image_2"
+                src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/6545aac55a7e3f0310c044cf/6545aaf3f9a7df001221795e/16990810740291801694.png"
+              />
+              <div class="section_7"></div>
+              <input type="text" id="phone" name="phone" class="font_2 text_4" placeholder="请输入手机号" required>
+            </div>
+            <div class="flex-row justify-between items-center section_6">
+              <div class="flex-row items-center space-x-16">
+                <img
+                  class="shrink-0 image_3"
+                  src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/6545aac55a7e3f0310c044cf/6545aaf3f9a7df001221795e/16990810741571248781.png"
+                />
+                <div class="section_7"></div>
+                <input type="text" id="code" name="code" class="font_2 text_4" placeholder="请输入验证码" required>
+              </div>
+              <div class="relative section_9">
+                <button type="button" id="button_duanxin" class="pos_2 text_5 flex-col justify-start relative text-wrapper_1">发送验证码</button>
+              </div>
+            </div>
+          </div>
+          <!-- 根据不同role，跳转至不同界面，这里先默认为顾客 -->
+          <!-- <a href="../guke_caidan/guke_caidan.html">  -->
+            <div class="flex-col group_2">
+                <button type="button" id="button_denglu" class="font_2 text_6 flex-col justify-start items-center text-wrapper_2">立即登录</button>
+            </div>
+          <!-- </a> -->
+        </div>
+        <div class="flex-col justify-start section_11">
+          <div class="flex-col justify-start items-center section_12"><div class="input"></div></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
