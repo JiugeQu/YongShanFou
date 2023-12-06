@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>codefun</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./order _ details.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="./order _ details.js"></script>
+  </head>
+  <body>
+    <div class="flex-col page">
+      <!-- 头部 -->
+      <div class="flex-row white ">
+        <a href="./order _ pending.html">
+            <img
+                class="image_1 pos"
+                src="./picture/p5.png"
+            />   
+        </a>
+        <div class="word1 white"><div class="word11">订单详情</div></div>
+      </div>
+      <!-- 中间订单 -->
+      <div class="flex-col  space-y-307 list space-y-2" id="orderDetailsContainer" ></div>
+      <button class="section_6 text_19 pos_13" id="modifyOrderBtn" onclick="openModal()">修改订单状态</button>
+      <!-- 模态框 -->
+      <div id="myModal" class="modal">
+        <div class="flex-col section_8z mt-315z">
+          <div class="flex-row justify-center self-stretch relative group_12z">
+            <span class="self-start text_25z">修改订单状态</span>
+            <img
+              class="image_7z pos_16z"
+              src="./picture/cha.png"
+              id="closeModalButton"
+            />
+          </div>
+          <span class="self-start font_3z text_6z text_26z">选择订单状态</span>
+          <div class="flex-col self-stretch group_13z">
+            <div class="flex-row group_14z">
+              <div class="flex-col justify-start items-center text-wrapper_2z1">
+                <span class="text_27z">备餐中</span>
+              </div>
+              <div class="flex-col justify-start items-center text-wrapper_2z2 ml-13z">
+                <span class="text_27z">已出餐</span>
+              </div>
+              <div class="flex-col justify-start items-center text-wrapper_2z3 view_6z ml-13z">
+                <span class="text_27z">取消订单</span>
+              </div>
+            </div>
+            <div class="flex-col justify-start text-wrapper_4z">
+              <span class="font_6z text_29z">
+                尊敬的客户,您在新畅饭店的外卖已由骑手为您派送，请留意接听。如未收到请联系商家电话：134788998765
+              </span>
+            </div>
+            <div class="flex-row justify-between items-center group_15z">
+              <input type="radio"><span class="font_3z text_30z">发送短信</span>
+            </div>
+            <div class="flex-col justify-start items-center text-wrapper_5z">
+              <span class="text_31z">确认</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="spacer"></div>
+      <!-- 底部 -->
+      <!-- 底部 -->
+      <div class="flex-col section_2">
+        <div class="self-center section_3"></div>
+      </div>
+    </div>
+  </body>
+</html>
