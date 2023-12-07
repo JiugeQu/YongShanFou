@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>顾客-订单详情</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="./guke_dingdanxiangqing.css" />
+    <script src="./guke_dingdanxiangqing.js"></script>
+  </head>
+  <body>
+    <div class="mod">
+      <div class="group" src="./images/img_0.png">
+        <div class="headerCommon header" src="./images/img_1.png">
+          <div class="blockCommon">
+            <div class="container">
+              <div class="wrapper">
+              </div>
+            </div>
+          </div>
+          <div class="blockCommon block1">
+            <a href="../guke_caidan/guke_caidan.html"><img class="iconLeft" src="./images/img_6.png" /></a>
+              <span
+              class="word"
+              >订单详情</span
+            >
+          </div>
+        </div>
+        <div class="headerCommon body">
+          <div
+            class="block2Common block2"
+            src="./images/img_7.png"
+          >
+            <div class="container1">
+              <div class="wrapper1Common wrapper1">
+                <div class="group3">
+                  <span id="address" class="tag">西电南校区海棠10号楼</span>
+                  <!-- <span class="book" id="book">xxx  1xxxxxxxxxx</span> -->
+                </div>
+              </div>
+              <div class="wrapper1Common wrapper2">
+                <button class="label">选择送餐时间</button>
+                <span id="time">15分钟后送达</span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="block2Common block3"
+            src="./images/img_10.png"
+          >
+            <div id="container2" class="container2">
+              <div class="wrapper3Common wrapper3">
+                <span class="tag">已选菜品</span>
+                <span class="label1">（共</span>
+                <span id="selected-dishes" class="label1">0</span>
+                <span class="label1">件）</span>
+              </div>
+              <script>
+               // 获取购物车的内容
+              fetch('../guke_caidan/guke_caidan.html')
+                .then(response => response.text())
+                .then(data => {
+                  var cartItems = localStorage.getItem('cartItems');
+                  if (cartItems) {
+                    document.getElementById('priceWrapper').innerHTML = cartItems;
+                  }
+                })
+                .catch(error => console.error('Error:', error)); 
+              </script>
+              <div class="wrapper3Common wrapper4">
+                <!-- <img
+                  class="iconAvatar"
+                  src="./images/img_11.png"
+                /> -->
+                <div class="group5">
+                  <div id="priceWrapper" class="priceWrapper">
+                    <!-- <span class="priceLabel">酸菜鱼</span><span class="price">￥9/份</span> -->
+                  </div>
+                  <!-- <span class="tag1">×1</span> -->
+                </div> 
+              </div>
+            </div>
+          </div>
+          <div
+            class="block2Common block4"
+            src="./images/img_13.png"
+          >
+            <div class="container3">
+              <span class="tag3">备注</span
+              >
+              <span id="note">不加辣椒。</span>
+            </div>
+          </div>
+          <div
+            class="block2Common block5"
+            src="./images/img_15.png"
+          >
+            <div class="list">
+              <div class="rowItem0Common rowItem0">
+                <span class="priceLabel1Common priceLabel1">商品金额</span>
+                <span id="total-price" class="priceLabel1Common price2">0</span>
+              </div>
+              <div class="rowItem0Common rowItem1">
+                <span class="priceLabel2Common priceLabel2">餐盒费</span
+                ><span class="priceLabel2Common price3">¥0.00</span>
+              </div>
+              <div class="rowItem0Common rowItem2">
+                <span class="priceLabel3Common priceLabel3">配送费</span
+                ><span class="priceLabel3Common price4">¥3.00</span>
+              </div>
+              <div class="rowItem0Common rowItem3">
+                <span class="priceLabel4Common priceLabel4">优惠</span
+                ><span class="priceLabel4Common price5">¥0.00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="headerCommon footer">
+          <img class="actionBg" src="./images/img_16.png" />
+          <div class="priceWrapper2"><span id="real_price" class="price6">实付款：¥0.00</span></div>
+          <div class="horizontalLine1"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

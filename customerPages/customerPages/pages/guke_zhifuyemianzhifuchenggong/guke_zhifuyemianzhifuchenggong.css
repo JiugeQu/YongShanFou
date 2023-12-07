@@ -1,0 +1,163 @@
+.page {
+  background-color: #dbdbdb;
+  border-radius: 1.25rem;
+  background-image: url(https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/6545aac55a7e3f0310c044cf/6545aaf3f9a7df001221795e/16990646898165815977.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+}
+.section {
+  padding: 0.88rem 0.94rem;
+  background-color: #ffffff;
+  border-bottom: solid 0.063rem #dedede;
+}
+.space-y-24 > *:not(:first-child) {
+  margin-top: 1.5rem;
+}
+.group {
+  padding-left: 0.63rem;
+  padding-right: 0.25rem;
+}
+.text {
+  color: #4c4c4c;
+  font-size: 1.06rem;
+  font-family: Roboto;
+  font-weight: 700;
+  line-height: 0.78rem;
+}
+.space-x-6 > *:not(:first-child) {
+  margin-left: 0.38rem;
+}
+.image {
+  width: 1.06rem;
+  height: 0.69rem;
+}
+.image_2 {
+  width: 0.94rem;
+  height: 0.69rem;
+}
+.image_3 {
+  width: 1.5rem;
+  height: 0.72rem;
+}
+.image_4 {
+  width: 1.13rem;
+  height: 1.19rem;
+}
+.pos {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.text_2 {
+  color: #666666;
+  font-size: 1.25rem;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 1.19rem;
+}
+.section_2 {
+  padding-top: 11.88rem;
+  background-color: #ffffff;
+  border-radius: 0px 0px 1.25rem 1.25rem;
+}
+.image_5 {
+  opacity: 0.16;
+  width: 11.31rem;
+  height: 11.31rem;
+}
+.section_3 {
+  padding: 0.63rem 0 1.88rem;
+  background-image: url('https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/6545aac55a7e3f0310c044cf/6545aaf3f9a7df001221795e/16990810724260380033.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 6.56rem;
+}
+.space-y-12 > *:not(:first-child) {
+  margin-top: 0.75rem;
+}
+.pos_4 {
+  position: absolute;
+  left: 50%;
+  top: 3.38rem;
+  transform: translateX(-50%);
+}
+.image_7 {
+  width: 5.63rem;
+  height: 0.81rem;
+}
+.image_9 {
+  width: 5rem;
+  height: 3.75rem;
+}
+.image_6 {
+  width: 4.31rem;
+  height: 1.38rem;
+}
+.pos_2 {
+  position: absolute;
+  left: 50%;
+  top: 2.78rem;
+  transform: translateX(-50%);
+}
+.image-wrapper {
+  padding: 1.88rem 0 1.63rem;
+  background-image: url('https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/6545aac55a7e3f0310c044cf/6545aaf3f9a7df001221795e/16990810724294954638.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 7.88rem;
+}
+.pos_3 {
+  position: absolute;
+  left: 50%;
+  top: 3.38rem;
+  transform: translateX(-50%);
+}
+.image_8 {
+  width: 4.5rem;
+  height: 3.44rem;
+}
+.text_3 {
+  margin-top: 1.75rem;
+  color: #666666;
+  font-size: 2.63rem;
+  font-family: Inter;
+  line-height: 2.47rem;
+}
+.text_4 {
+  margin-top: 17.38rem;
+  color: #666666;
+  font-size: 2.13rem;
+  font-family: Inter;
+  line-height: 1.97rem;
+  letter-spacing: 0.13rem;
+}
+.section_4 {
+  margin-top: 3.88rem;
+  padding: 0.75rem 0;
+  background-color: #ffffff;
+  border-top: solid 0.063rem #dedede;
+}
+.section_5 {
+  background-color: #000000;
+  border-radius: 6.25rem;
+  width: 13.06rem;
+  height: 0.31rem;
+}
+
+button {
+  border: none;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+  /* 其他自定义样式 */
+}
+a {
+  text-decoration: none; /* 去掉下划线 */
+  color: inherit; /* 继承父元素的颜色 */
+  /* 其他自定义样式 */
+}

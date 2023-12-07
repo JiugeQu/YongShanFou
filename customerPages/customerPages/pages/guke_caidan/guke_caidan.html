@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>顾客-菜单</title>
+    <link rel="stylesheet" href="./guke_caidan.css" />
+    <script src="./guke_caidan.js"></script>
+  </head>
+  <body>
+    <div class="mod">
+      <div class="body" src="./images/img_0.png">
+        <div class="container" src="./images/img_1.png">
+          <div class="wrapper">
+            <div class="group">
+              <div class="view">
+                <img
+                  class="iconDown"
+                  src="./images/img_2.png"
+                /><img
+                  class="iconDown1"
+                  src="./images/img_3.png"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="wordWrapper"><span class="word">用膳否</span></div>
+        <div class="container1" src="./images/img_5.png">
+          <span class="labelCommon label">订餐热线：15320231102</span
+          ><span class="labelCommon meta">商家地址：秦创园602号</span
+          ><span class="labelCommon benifit">美丽星期三：全场8折</span>
+        </div>
+      </div>
+
+      <div class="scroll-container" style="height: 400px; overflow-y: auto;">  
+        <!-- 菜品信息将在这里显示 -->  
+      </div>
+
+    <div class="ff">
+        <div class="footer">
+          <div class="container6" src="./images/img_22.png">
+            <div class="wrapper7">
+              <div class="group5Common group5">
+                <span class="word3Common word3">已选择 </span>
+                <span class="word3Common num" id="selected-dishes">0</span>
+                <span class="word3Common tag3">道菜</span>
+              </div>
+              <div class="group5Common group6">
+                <span class="price4Common price4">应付总额：¥</span>
+                <span class="price4Common price4" id="total-price">0</span>
+                <span class="price4Common price5">（配送费¥3）</span>
+              </div>
+            </div>
+            <div class="wordWrapper1" src="./images/img_23.png">
+              <a href="../guke_jiesuan/guke_jiesuan.html">
+                <button class="word4">现在结算</button>
+              </a>
+            </div>
+
+            <!-- 购物车弹窗，触发事件 -->
+            <button onclick="openModal()">
+                <img class="shopping_car" src="./images/img_102.png" />
+            </button>
+
+            <!-- 模态框 -->
+            <div id="myModal" class="modal" >
+                  <div class="container_12" src="./images/img_203.png">
+                    <img
+                    class="close-icon"
+                    src="./images/cha.png"
+                    id="closeModalButton"
+                    />
+                    <div class="wrapper_11">
+                      <span class="labelCommon word_11">已选菜品</span><span class="labelCommon label_11">（请适量点餐）</span>
+                    </div>
+                  </div>
+                  <div class="container_13" src="./images/img_205.png">
+                    <div id="cart-items" class="wrapper_12">
+                      <!-- <div class="group_12">
+                        <div id="jian" class="view_11">
+                          <img
+                            class="iconDown_12"
+                            src="./images/img_207.png"
+                          />
+                        </div>
+                        <span class="num_11">1</span>
+                        <div id="jia" class="view_11">
+                          <img 
+                            class="iconDown_12"
+                            src="./images/img_209.png"
+                          />
+                        </div>
+                      </div> -->
+                    </div>
+                  </div>
+            </div>
+
+            <!-- 下方三图标 -->
+            <div class="flex-row section_5">
+              <div class="group_7">
+                  <img
+                    class="image_2 image_9"
+                    src="./images/img_103.png"
+                  />
+                <a href="../guke_dingdan/guke_dingdan.html">
+                  <img
+                    class="image_2"
+                    src="./images/img_104.png"
+                  />
+                </a>
+                <a href="../guke_gerenzhongxin/guke_gerenzhongxin.html">
+                    <img
+                      class="image_2 image_10"
+                      src="./images/img_105.png"
+                    />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </body>
+</html>

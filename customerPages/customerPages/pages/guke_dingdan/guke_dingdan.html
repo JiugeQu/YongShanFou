@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>顾客-订单</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="../../index.css" />
+    <link rel="stylesheet" href="./guke_dingdan.css" />
+    <script type="text/javascript" src="./guke_dingdan.js"></script>
+  </head>
+  <body>
+    <!-- 头部 -->
+    <div class="flex-col page space-y-4">
+      <div class="flex-col section space-y-12">
+        <span class="self-center text">订单</span>
+        <div class="flex-row group">
+          <div class="flex-col justify-start items-center text-wrapper"><span class="font_1 text_2">未送达</span></div>
+          <div class="flex-col justify-start items-center text-wrapper_2">
+            <a href="../guke_pingjia/guke_pingjia.html">
+              <span class="font_1">待评价</span>
+            </a>
+          </div>
+          <div class="flex-col justify-start items-center text-wrapper_3">
+            <a href="../guke_yipingjia/guke_yipingjia.html">
+              <span class="font_1">已评价</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- 身体 -->
+      <div class="flex-col space-y-307 list space-y-2" id="output"></div>
+      <!-- 尾部 -->
+        <div class="flex-col section_33">
+          <div class="flex-row">
+            <div class="flex-col justify-start items-center image-wrapper_100 equal-division-item_2">
+              <a href="../guke_caidan/guke_caidan.html">
+                <img
+                class="image_66"
+                src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/6545aac55a7e3f0310c044cf/6545aaf3f9a7df001221795e/16990810733031727245.png"
+                />
+              </a>
+            </div>
+            <div class="flex-col justify-start items-center image-wrapper equal-division-item_2">
+              <img
+                class="image_66"
+                src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/6545aac55a7e3f0310c044cf/6545aaf3f9a7df001221795e/16990810733326715523.png"
+              />
+            </div>
+            <div class="flex-col justify-start items-center image-wrapper equal-division-item_2">
+              <a href="../guke_gerenzhongxin/guke_gerenzhongxin.html">
+                <img
+                class="image_66"
+                src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/6545aac55a7e3f0310c044cf/6545aaf3f9a7df001221795e/16990810732300695057.png"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="self-center section_44"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
