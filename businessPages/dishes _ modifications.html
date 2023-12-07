@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>codefun</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./dishes _ modifications.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="./dishes _ modifications.js"></script>
+  </head>
+  <body>
+    <div class="flex-col page">
+      <!-- 头 -->
+      <div class="flex-row whitet ">
+        <a href="./business_center.html">
+            <img
+                class="image_1t post"
+                src="./picture/p5.png"
+            />   
+        </a>
+        <div class="word1t whitet"><div class="word11t">修改菜品</div></div>
+      </div>
+      <!-- 中间 -->
+      <div class="flex-col section_2">
+        <!-- 品类 -->
+        <div id="categoriesContainer"></div>
+        <!-- 横线 -->
+        <div class="flex-col self-stretch">
+          <div class="self-start section_3"></div>
+          <div class="self-stretch divider"></div>
+        </div>
+        <!-- 搜索框 -->
+        <div class="flex-row self-start">
+          <div class="relative">
+            <input type="text" class="image-wrapper bo" id="searchInput" placeholder="输入关键词进行搜索" oninput="searchDishes()" />
+            <!-- 图片按钮 -->
+            <img
+              class="image_5 search-icon"
+              src="./picture/sousuo.png"
+            />
+          </div>
+          <div class="self-stretch divider"></div>
+        </div>
+        <!-- 搜索结果弹框 -->
+        <div id="searchResults" class="search-results"></div>
+        <!-- 排序 -->
+        <div class="flex-row justify-end items-center self-stretch group_2 ">
+          <a href="./排序.html" class="chao">
+            <img
+              class="image_6"
+              src="./picture/p4.png"
+            />
+            <span class="ml-6 font text_3">排序</span>
+          </a>
+          
+        </div>
+        <!-- 菜品 -->
+        <div id="targetElement"></div>
+        <!-- 模态框 -->
+        <div id="myModal" class="modal" >
+          <div class="flex-col section_8z mt-315z">
+            <div class="flex-row justify-center self-stretch relative group_12z">
+              <span class="self-start text_25z">修改菜品状态</span>
+              <img
+                class="image_7z pos_16z"
+                src="./picture/cha.png"
+                id="closeModalButton"
+              />
+            </div>
+            <span class="self-start font_3z text_6z text_26z">选择菜品状态</span>
+            <div class="flex-col self-stretch group_13z">
+              <div class="flex-row group_14z">
+                <div class="flex-col justify-start items-center text-wrapper_2z1">
+                  <span class="text_27z">上架</span>
+                </div>
+                <div class="flex-col justify-start items-center text-wrapper_2z2 ml-13z">
+                  <span class="text_27z">下架</span>
+                </div>
+                <div class="flex-col justify-start items-center text-wrapper_2z3 view_6z ml-13z">
+                  <span class="text_27z">售罄</span>
+                </div>
+              </div>
+              <div class="flex-col justify-start text-wrapper_4z">
+                <span class="font_6z text_29z">
+                  
+                </span>
+              </div>
+              <div class="flex-row justify-between items-center group_15z">
+                <input type="radio"><span class="font_3z text_30z"></span>
+              </div>
+              <div class="flex-col justify-start items-center text-wrapper_5z">
+                <span class="text_31z">确认</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 添加餐食 -->
+        <div class="flex-row justify-center items-center self-center group_10">
+          <img
+            class="image_9"
+            src="./picture/redjia.png"
+          />
+          <a href="./dishes _ add.html" class="chao"><span class="font text_11 ml-9">添加餐食</span></a>
+        </div>
+        <div class="spacer2"></div>
+      </div>
+      <div class="spacer"></div>
+      <!-- 尾 -->
+      <div class="flex-col justify-start items-center section_4">
+        <div class="section_5"></div>
+      </div>
+    </div>
+  </body>
+</html>

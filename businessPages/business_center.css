@@ -1,0 +1,148 @@
+  .page {
+    /* padding-top: 5.75rem; */
+    background-color: #dbdbdb;
+    border-radius: 1.25rem;
+    background-image: url(https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/6545ac9f5a7e3f0310c0623f/6545acbdf9a7df00122179e5/16990652942436190145.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+  }
+
+ 
+ 
+  .image {
+    width: 1.63rem;
+    height: 1.1rem;
+  }
+
+
+  .back1{
+    left: 19px;
+    top: 100px;
+    width: 392px;
+    height: 201px;
+    opacity: 1;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 1);  
+    border: 1px solid rgba(232, 232, 232, 1);
+  }
+
+  .line1{
+    left: 67.26px;
+    top: 153px;
+    width: 295.48px;
+    height: 0px;
+    opacity: 1;
+    border: 1px solid rgba(235, 235, 235, 1);
+  }
+
+ .picture1{
+    left: 376.75px;
+    top: 122.38px;
+    width: 7.58px;
+    height: 12.25px;
+    opacity: 1;
+    background: rgba(178, 178, 178, 1);   
+    
+ }
+
+  /* 头部 */
+  .white{
+      width: 100%;
+      height: 4rem;
+      background-color: rgb(255, 255, 255);
+      
+  }
+
+  .word1{
+      font-size: 1.45rem;
+      font-weight: 700;
+      letter-spacing:0px;
+      line-height:1.19rem;
+      font-family: 楷体;
+      text-align: center;
+      color: rgb(0, 0, 0);
+  }
+
+  .word11{
+    margin-top: 2rem;
+  }
+
+  /* 中 */
+  .section {
+      width: 91.16%;
+      height: 225px;
+      background-color: #ffffff;
+      margin-left: 4.3%;
+      margin-top: 20px;
+      border-radius: 1.25rem;
+    }
+
+  .white2{
+    width: 85%;
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+    line-height: 50px;
+    border-radius: 0.25rem;
+  }
+
+  .word3{
+    margin-left: 18px;
+    font-family: 楷体;
+    font-size: 1.2rem;
+  }
+
+  .chaolianjie:link{
+    color:rgb(0, 0, 0);
+  }
+  .chaolianjie:visited{
+      color:rgb(0, 0, 0);
+  }
+  .chaolianjie:hover{
+      text-decoration: none;
+  }
+  .chaolianjie:active{
+      text-decoration: none;
+  }
+
+  .a{
+    text-decoration: none;
+  }
+
+  /* 底部 */
+  .equal-division-item_2 {
+    padding: 1rem 0 1rem;
+    background-color: #cccccc00;
+    width: 8.88rem;
+  }
+  .image_2 {
+    width: 1.25rem;
+    height: 1.38rem;
+  }
+  .equal-division-item {
+    padding: 1rem 0 1.3rem;
+    background-color: #cccccc00;
+    width: 8.88rem;
+  }
+  .image_3 {
+    margin-left: 3.63rem;
+    width: 1.13rem;
+    height: 1.44rem;
+  }
+
+  .section_2 {
+    padding: 0 4.38rem 0.94rem 3.13rem;
+    position:fixed;bottom:0;
+    width: 100%;
+    background-color: #ffffff;
+  }
+
+  .section_3 {
+    background-color: #000000;
+    border-radius: 6.25rem;
+    width: 13.06rem;
+    height: 0.31rem;
+  }

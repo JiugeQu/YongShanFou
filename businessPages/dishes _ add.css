@@ -1,0 +1,174 @@
+  .page {
+    background-color: #dbdbdb;
+    border-radius: 1.25rem;
+    background-image: url(https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/6545ac9f5a7e3f0310c0623f/6545acbdf9a7df00122179e5/16990652942436190145.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+  }
+ 
+  /* 底部 */
+  .section_2 {
+    padding: 0 4.38rem 0.94rem 3.13rem;
+    position:fixed;bottom:0;
+    width: 100%;
+    background-color: #ffffff;
+  }
+
+  .section_5 {
+    background-color: #000000;
+    border-radius: 6.25rem;
+    width: 13.06rem;
+    height: 0.31rem;
+  }
+
+
+  /* 头部 */
+  .word1{
+    letter-spacing:0px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 1.45rem;
+    font-family: 楷体;
+    font-weight: 700;
+    line-height: 1.19rem;
+ } 
+
+ .word2{
+  margin-top: 2rem;
+ }
+
+ .white{
+    width: 100%;
+    height: 4rem;
+    background-color: rgb(255, 255, 255);
+    
+ } 
+
+ .image_1{
+  width: 1.25rem;
+  height: 1.38rem;
+}
+
+.pos {
+  position: absolute;
+  left: 5%;
+  top: 2.65rem;
+  transform: translateY(-50%);
+}
+
+ /* 中间 */
+ .section {
+    width: 91.16%;
+    height: 18rem;
+    background-color: #ffffff;
+    margin-left: 4.3%;
+    margin-top: 20px;
+    border-radius: 1.25rem;
+  }
+  .bo{
+    color:#323232;
+    padding: 0.25rem 2.5rem 0.25rem 0;
+    background-color: #f3f3f3;
+    font-size: 1rem;
+    text-align: center;
+    border:solid 1px rgb(231, 231, 231);
+  }
+
+  .line1{
+    left: 67.26px;
+    top: 153px;
+    width: 95%;
+    height: 0px;
+    opacity: 1;
+    border: 1px solid rgba(235, 235, 235, 1);
+  }
+
+  .word3{
+    margin-left: 18px;
+    font-size: 1rem;
+  }
+
+  .equal-division-item {
+    padding: 1rem 0 0.4rem;
+    background-color: #cccccc00;
+    width: 8.88rem;
+  }
+
+  .equal-division-item2 {
+    padding: 2.5rem 0 0.4rem;
+    background-color: #cccccc00;
+    width: 8.88rem;
+  }
+
+  .equal-division-item3 {
+    padding: 0.3rem 0 0;
+    background-color: #cccccc00;
+    width: 4rem;
+  }
+
+  .filediv{
+    position: relative;
+    margin-left: 30%;
+ }
+ .filediv input{
+    opacity: 0;
+    width: 100px;
+    height: 35px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 99;
+ }
+ .filediv div{
+    height: 35px;
+    line-height: 35px;
+    background-color: #03a9f4;
+    color: #fff;
+    width: 100px;
+    text-align: center;
+    font-size: 14px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 98;
+ }
+
+ .section_3 {
+    background-color: #9a3b35;
+    border-radius: 0.38rem;
+    width: 14.19rem;
+    height: 2.56rem;
+    margin-top: 20rem;
+    margin-left:5rem;
+  }
+
+  .section_4 {
+    background-color: #e9e7e7;
+    border-radius: 0.38rem;
+    width: 14.19rem;
+    height: 2.56rem;
+    margin-top: 6px;
+    margin-left:5rem;
+  }
+
+  .word4{
+    color: #ffffff;
+    font-size: 1rem;
+    font-family: 楷体;
+    font-weight: 550;
+    line-height: 0.94rem;
+    letter-spacing: 0.13rem;
+  }
+
+  .word5{
+    color: #000000;
+    font-size: 1rem;
+    font-family: 楷体;
+    font-weight: 550;
+    line-height: 0.94rem;
+    letter-spacing: 0.13rem;
+  }

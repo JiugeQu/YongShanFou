@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>添加餐食</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./dishes _ add.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="./dishes _ add.js"></script>
+  </head>
+  <body>
+    <script src="./dishes _ add.js"></script>
+    <div class="flex-col page">
+      <!-- 头部 -->
+      <div class="word1 white">
+        <a href="./dishes _ modifications.html">
+          <img
+              class="image_1 pos"
+              src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/6545ac9f5a7e3f0310c0623f/6545acbdf9a7df00122179e5/16990657343899377661.png"
+          />   
+      </a>
+        <div class="word2">添加餐食</div>
+      </div>
+      <!-- 中间表格 -->
+      <div class="flex-col section ">
+        <form id="dishForm" method="post" action="">
+          <div class="word3 flex-row">
+              <div class="equal-division-item2"><label for="image">餐食图片：</label></div>
+              <div class="filediv">
+                  <img id="previewImage" src="./picture/分组 3.png" class="equal-division-item3">
+                  <input type="file" id="image" accept="image/*" onchange="previewImage(event)" />
+              </div>
+          </div>
+          <div class="line1"></div>
+          <div class="flex-row word3 equal-division-item">
+              <label for="name">餐食名称：<input class="bo" type="text" id="name" placeholder="请输入餐食名称"></label>
+          </div>
+          <div class="line1"></div>
+          <div class="flex-row word3 equal-division-item">
+              <label for="description">餐食描述：<input class="bo" type="text" id="description" placeholder="请输入餐食描述"></label>
+          </div>
+          <div class="line1"></div>
+          <div class="flex-row word3 equal-division-item">
+              <label for="type">餐食类型：<input class="bo" type="text" id="type" placeholder="请输入餐食类型"></label>
+          </div>
+          <div class="line1"></div>
+          <div class="flex-row word3 equal-division-item">
+              <label for="price">餐食价格：<input class="bo" type="text" id="price" placeholder="请输入餐食价格"></label>
+          </div>
+          <button type="button" onclick="submitForm()" class="section_3 word4">添加</button>
+          <button type="reset" class="section_4 word5">重置</button>
+      </form>
+      </div>
+      <!-- 底部   -->
+      <div class="flex-col section_2">
+        <div class="self-center section_5"></div>
+      </div>
+
+      
+  </body>
+</html>
